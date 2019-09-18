@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="weather.search.display.DisplayController">
+   <children>
+      <MenuBar maxWidth="-Infinity" prefWidth="600.0">
+        <menus>
+            <Menu mnemonicParsing="false">
+               <graphic>
+                  <Button fx:id="SearchButton" alignment="CENTER" focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onSearchButtonClick" prefHeight="20.0" prefWidth="20.0">
+                     <graphic>
+                        <ImageView blendMode="SRC_ATOP" fitHeight="20.0" fitWidth="20.0" focusTraversable="true" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="/SearchIcon.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="DEFAULT" />
+                           </cursor>
+                        </ImageView>
+                     </graphic>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </Button>
+               </graphic>
+            </Menu>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem fx:id="menuItemClose" mnemonicParsing="false" onAction="#onMenuItemCloseAction" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Label fx:id="weatherLocationLabel" layoutX="284.0" layoutY="50.0" text="Text" />
+      <ImageView fx:id="weatherImageView" fitHeight="150.0" fitWidth="200.0" layoutX="200.0" layoutY="125.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="weatherDescriptionLabel" layoutX="284.0" layoutY="300.0" text="Text" />
+      <Label fx:id="weatherTempLabel" layoutX="284.0" layoutY="350.0" text="Text" />
+   </children>
+</Pane>
